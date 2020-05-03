@@ -1,0 +1,36 @@
+###
+
+# curl -d '{book(id:1){id name}}' -H "Content-Type: application/json" -X POST http://localhost:8001
+POST http://localhost:8001
+Content-Type: application/json
+
+{
+  book(id: 1){
+  id
+  name
+}}
+
+###
+
+POST http://localhost:8001
+Content-Type: application/json
+
+{
+  book(id: 2){
+  id
+  name
+  genre
+}}
+
+###
+
+POST http://localhost:8001
+Content-Type: application/json
+
+{
+  book(id: 0){
+  id
+  name
+  genre
+}}
+
