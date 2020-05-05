@@ -94,8 +94,6 @@ func ProcessQuery(query string) graphql.Result {
 
 	params := graphql.Params{Schema: schema, RequestString: query}
 	grp := graphql.Do(params)
-	if len(grp.Errors) > 0 {
-		log.Fatalf("failed to execute graphql operation, errors: %+v", grp.Errors)
-	}
+	
 	return *grp
 }

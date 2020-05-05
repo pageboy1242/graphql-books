@@ -34,3 +34,15 @@ Content-Type: application/json
   genre
 }}
 
+### Invalid Request - should return an error
+
+POST http://localhost:8001
+Content-Type: application/json
+
+{
+  book(id: 0){
+  id
+  name
+  pages
+}}
+
